@@ -1,3 +1,28 @@
+/* 
+ * Copyright (c) 2014, Roberto Capuano <roberto@2think.it>
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ * * Redistributions of source code must retain the above copyright notice, this
+ *   list of conditions and the following disclaimer.
+ * * Redistributions in binary form must reproduce the above copyright notice,
+ *   this list of conditions and the following disclaimer in the documentation
+ *   and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+ */
 package debug.runtime;
 
 import javax.swing.SwingUtilities;
@@ -99,9 +124,9 @@ public class RuntimeManager implements DebugOff
 	 ** **todo: questi tre metodi, con la relativa classe dei pendings.
 	 ** I breakpoint, waitchpoint, ed exception sono richieste che hanno il seguente ciclo di vita:
 	 ** 1. viene fatta la richiesta
-	 ** 2. verifica se la classe  stata caricata nella vm: VirtualMachine.allClasses()
-	 ** 3. se  presente viene usata la Location all'interno della classe per settarla
-	 ** 4. altrimenti diventa pending, ed ad ogni evento ClassPrepare si verifica se pu˜ essere risolto.
+	 ** 2. verifica se la classe ï¿½ stata caricata nella vm: VirtualMachine.allClasses()
+	 ** 3. se ï¿½ presente viene usata la Location all'interno della classe per settarla
+	 ** 4. altrimenti diventa pending, ed ad ogni evento ClassPrepare si verifica se puï¿½ essere risolto.
 	 */
 	void addBreakpoint( String SourceFile, String SourcePath, int linenumber )
 	{
@@ -358,7 +383,7 @@ public class RuntimeManager implements DebugOff
 	{
 		synchronized( addListeners )
 		{
-			// l'unico problema  se un listeners si toglie e si aggiunge tra due invocazione di getIteratorJDIListeners()
+			// l'unico problema ï¿½ se un listeners si toglie e si aggiunge tra due invocazione di getIteratorJDIListeners()
 			if (addListeners.size()>0)
 			{
 				jdiListeners.addAll( addListeners );

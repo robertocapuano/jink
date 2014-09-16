@@ -1,3 +1,28 @@
+/* 
+ * Copyright (c) 2014, Roberto Capuano <roberto@2think.it>
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ * * Redistributions of source code must retain the above copyright notice, this
+ *   list of conditions and the following disclaimer.
+ * * Redistributions in binary form must reproduce the above copyright notice,
+ *   this list of conditions and the following disclaimer in the documentation
+ *   and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+ */
 package debug.model;
 
 import com.sun.jdi.*;
@@ -20,11 +45,11 @@ import debug.mock.*;
  ** Il repository contiene tutti gli oggetti ed i threads usati nel programma debuggato.
  ** Alcuni di questi (sia oggetti che threads) avranno l'handler e sono stati istanziati dall'utente (oggetti workspace)
  ** Questi verranno visualizzati quando si sceglie di visualizzare solo gli oggetti workspace.
- ** Gli oggetti non workspace verranno visualizzati quando si sceglierà questo filtro.
- ** Infine i passati stati degli oggetti quando si sceglierà questa modalità.
+ ** Gli oggetti non workspace verranno visualizzati quando si sceglierÔøΩ questo filtro.
+ ** Infine i passati stati degli oggetti quando si sceglierÔøΩ questa modalitÔøΩ.
  ** I Threads morti allo stesso modo.
  ** Questi filtri saranno implementati nell' Application Model (class BackEndModel)
- ** Questo, per la cronaca, è il Business Model
+ ** Questo, per la cronaca, ÔøΩ il Business Model
  **
  */
  
@@ -73,7 +98,7 @@ public class BackEndModel implements DebugOn
 	
 	/**
 	 ** Restituisce il modello del riferimento
-	 ** Per adesso solo ObjectModel, più avanti StringModel, ArrayModel, ClassModel, ClassLoaderModel.
+	 ** Per adesso solo ObjectModel, piÔøΩ avanti StringModel, ArrayModel, ClassModel, ClassLoaderModel.
 	 */
 	public synchronized DetailModel referenceToModel( ObjectReference reference ) throws OperationException
 	{
@@ -88,7 +113,7 @@ public class BackEndModel implements DebugOn
 		// da qui factory method
 		if ( model == null )
 		{
-			// l'ordine qui è significativo
+			// l'ordine qui ÔøΩ significativo
 			
 			if ( reference instanceof StringReference )
 			{
@@ -165,7 +190,7 @@ public class BackEndModel implements DebugOn
 	}
 
 	/**
-	 ** Restituisce solo gli oggetti del workspace, cioè creati dall'utente, hanno l'handler
+	 ** Restituisce solo gli oggetti del workspace, cioÔøΩ creati dall'utente, hanno l'handler
 	 */
 	public synchronized List getWorkspaceModels()
 	{
