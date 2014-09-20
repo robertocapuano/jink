@@ -8,4 +8,4 @@ Jink is an interactive tool for the visualization of the ex- ecution of a runnin
 (c) to observe the in- terleaving of thread scheduling, and 
 (d) to inspect objects fields as well as their evolution on the heap of the JVM.
 
-
+[![Alt text for your video](http://img.youtube.com/vi/Jz-h7fr_YHo/0.jpg)](http://www.youtube.com/watch?v=Jz-h7fr_YHo)
